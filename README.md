@@ -1,7 +1,7 @@
 react-starter-boilerplate
 =====================
 
-react-starter-boilerplate, fork自[react-starter-boilerplate](thttps://github.com/gaearon/react-hot-boilerplate) 
+react-starter-boilerplate, fork自[react-starter-boilerplate](thttps://github.com/gaearon/react-hot-boilerplate)  
 包含了[react-hot-loader](https://github.com/gaearon/react-hot-loader), [babel-loader](https://github.com/babel/babel-loader), Sass-loader的最小版本
 
 ### Usage
@@ -31,4 +31,4 @@ You may want to change the host in `server.js` and `webpack.config.js` from `loc
 * [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
 * [babel-loader](https://github.com/babel/babel-loader)
 * [react-hot-loader](https://github.com/gaearon/react-hot-loader)
-* Sass-loader
+* sass-loader
