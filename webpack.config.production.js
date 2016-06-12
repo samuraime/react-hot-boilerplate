@@ -2,19 +2,27 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-    devtool: 'eval',
-    entry: [
-        'webpack-dev-server/client?http://localhost:3000',
-        'webpack/hot/only-dev-server',
-        './src/index'
-    ],
+    devtool: 'cheap-module-source-map',
+    entry: 
+    {
+        index: path.resolve(__dirname, 'src/index.js'),
+    },
     output: {
         path: path.join(__dirname, 'build'),
         filename: 'bundle.js',
         publicPath: '/build/'
     },
-    plugins: [
-        new webpack.HotModuleReplacementPlugin()
+    plugins:[
+        new webpack.DefinePlugin({
+            'process.env':{
+                'NODE_ENV': JSON.stringify('production')
+            }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress:{
+                warnings: true
+            }
+        })
     ],
     module: {
         loaders: [{
